@@ -1,7 +1,6 @@
-let 
 let name = prompt("Гривні у доліри!:");
 switch (name) {
-    case name === :
+    case name === 0:
         // Код, що виконується, якщо вираз рівний значенню1
         break;
     case значення2:
