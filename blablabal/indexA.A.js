@@ -125,3 +125,50 @@
 // console.log(multiplyThree2(5)(2)(3)(8));
 
 
+// function totalData(data) {
+//     let total = 0;
+//     for (const item of data) {
+//         if (Array.isArray(item)) {
+//             total += totalData(item);
+//         } else {
+//             total += item;
+//         }
+//     }
+//     return total;
+//
+// }
+//
+// console.log(totalData([1, [2, 3], [4, [5, 6]], 7]));
+
+
+
+//
+// function dd() {
+//     if (arr.length <= 1) return true;
+//         if (arr[0] !== arr[arr.length - 1]) return false;
+//         return dd(arr.slice(1, arr.length - 1));
+//
+// }
+//
+// console.log(dd([1, 2, 3, 2, 1]))
+//
+
+
+
+
+
+let target = 1;
+
+
+function ddd(arr, target) {
+    if (arr.length === 0) return 0;
+        return (arr[0] === target ? 1 : 0) + ddd(arr.slice(1), target);
+}
+
+console.log(ddd([1, 2, 3, 1, 4, 1, 5], 1));  // 3
+// function countOccurrences(arr, target) {
+//     if (arr.length === 0) return 0;
+//     return (arr[0] === target ? 1 : 0) + countOccurrences(arr.slice(1), target);
+// }
+//
+// console.log(countOccurrences([1, 2, 3, 1, 4, 1, 5], 1));  // 3
