@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="index13.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<form action="" id="form">
+    <h1>SHAWERMA</h1>
+    <p><label for="name"></label><input type="text" placeholder="Name" id="name" required></p>
+    <div id="name_err" class="error"></div>
+    <p><label for="mess"></label><textarea placeholder="Message" name="Message" id="mess" cols="21" rows="3" minlength="5" required></textarea></p>
+    <div id="mess_err" class="error"></div>
+    <h5>tobi kyda otpravit</h5>
+    <p><label for="tell"></label><input type="tel" placeholder="Phone number" id="tell" pattern="^\+380\d{9}$" maxlength="13" required></p>
+    <div id="tell_err" class="error"></div>
+    <p><label for="email"></label><input type="email" placeholder="Email" id="email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" required></p>
+    <div id="email_err" class="error"></div>
+    <p><button id="submit" type="submit">Send message</button></p>
+</form>
+</body>
+</html>
