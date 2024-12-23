@@ -20,36 +20,24 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelector(`#name_err`).innerText = 'GDE IMY?';
             isValid = false;
 
-            setTimeout(() => {
-                document.querySelector(`#name_err`).innerText = '';
-            }, 2000);
         }
         if (mess.length < 5) {
             document.querySelector(`#mess_err`).innerText = 'nada Bolbhe chem 5 simvolov!!!';
             isValid = false;
 
-            setTimeout(() => {
-                document.querySelector(`#mess_err`).innerText = '';
-            }, 2000);
         }
         if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
             document.querySelector(`#email_err`).innerText = 'Vot primer => hallo@gmail.com';
             isValid = false;
 
-            setTimeout(() => {
-                document.querySelector(`#email_err`).innerText = '';
-            }, 2000);
         }
         if (tell.length < 13 || !/^\+380\d{9}$/.test(tell)) {
             document.querySelector(`#tell_err`).innerText = 'normalbno zapishi telephone!';
             isValid = false;
 
-            setTimeout(() => {
-                document.querySelector(`#tell_err`).innerText = '';
-            }, 2000);
         }
         else {
-            console.log({name, mess, email, tell});
+            console.log([`Name => ${name}`, `Message => ${mess}`, `Phone => ${tell}`, `Email => ${email}`]);
             alert("PRACYE!");
             document.querySelector(`#form`).reset();
         }
