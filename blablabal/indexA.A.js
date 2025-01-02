@@ -157,18 +157,55 @@
 
 
 
-let target = 1;
-
-
-function ddd(arr, target) {
-    if (arr.length === 0) return 0;
-        return (arr[0] === target ? 1 : 0) + ddd(arr.slice(1), target);
-}
-
-console.log(ddd([1, 2, 3, 1, 4, 1, 5], 1));  // 3
+// let target = 1;
+//
+//
+// function ddd(arr, target) {
+//     if (arr.length === 0) return 0;
+//         return (arr[0] === target ? 1 : 0) + ddd(arr.slice(1), target);
+// }
+//
+// console.log(ddd([1, 2, 3, 1, 4, 1, 5], 1));  // 3
 // function countOccurrences(arr, target) {
 //     if (arr.length === 0) return 0;
 //     return (arr[0] === target ? 1 : 0) + countOccurrences(arr.slice(1), target);
 // }
 //
 // console.log(countOccurrences([1, 2, 3, 1, 4, 1, 5], 1));  // 3
+
+
+
+
+
+
+
+const errorContainers = document.querySelectorAll('[data-error]');
+const form = document.forms.task
+const formData = {}
+function setData(regex, value, message) {
+    const valid = regex.test(value);
+    return {
+        value,
+        valid,
+        errorMessage: !valid ? message : 'Valid'
+    }
+}
+function checkData(e, el) {
+    switch (e.target.name) {
+        case el.dataset.error: {
+            formData[e.target.name] = setData(/^\w+$/g, e.target.value, 'Please enter a valid name')
+            el.innerText = formData[e.target.name].errorMessage;
+            form.elements.submit.disabled = !formData[e.target.name].valid
+        }
+    }
+}
+form.addEventListener('focusout', e => {
+    Array.from(errorContainers).forEach( el => {
+        checkData(e, el)
+    })
+})
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    console.log(formData)
+})
+
