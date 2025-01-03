@@ -67,3 +67,35 @@ console.log(student1.surname);
 console.log(`Вік: ${student1.getAge()}`);
 console.log(`Середній бал: ${student1.getAverage()}`);
 console.log(student1.summary());
+
+const student2 = new Student("Тут", "Там", 1234, [95, 88, 92, 92, 85]);
+
+student2.absent();
+student2.absent();
+student2.absent();
+student2.absent();
+student2.absent();
+student2.absent();
+student2.absent();
+
+console.log(student2.name);
+console.log(student2.surname);
+console.log(`Вік: ${student2.getAge()}`);
+console.log(`Середній бал: ${student2.getAverage()}`);
+console.log(student2.summary());
+
+const student3 = new Student("Жак", "фреско", 1911, [95, 98, 92, 100, 99]);
+
+student3.present();
+student3.present();
+student3.present();
+student3.present();
+student3.present();
+student3.present();
+student3.present();
+
+console.log(student3.name);
+console.log(student3.surname);
+console.log(`Вік: ${student3.getAge()}`);
+console.log(`Середній бал: ${student3.getAverage()}`);
+console.log(student3.summary());
