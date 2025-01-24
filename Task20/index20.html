@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="index20.js" defer></script>
+    <link rel="stylesheet" href="style20.css">
+</head>
+<body>
+    <div class="bd-example bg-body-tertiary">
+        <div class="modal position-static d-block" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Tasks</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <input type="text" placeholder="pidhi tyta..." id="input">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-dark btn-add" data-bs-dismiss="modal" style="display: none">Add</button>
+                        <button type="button" class="btn btn-secondary close" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                <ul id="taskList" class="list-group"></ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
