@@ -53,24 +53,48 @@ button_reset.addEventListener("click", async () => {
     }
 });
 
-function prepareWeather(data) {
-    const { city, temp, humidity, wind_speed, cloud, temp_feels, weather_icon, weekday, day, month, year, hours, minutes } = data;
-
-    return `
-        <h2>Погода в місті ${city}</h2>
-        <p>Температура: ${temp}°C</p>
-        <p>Вологість: ${humidity}%</p>
-        <p>Швидкість вітру: ${wind_speed} м/с</p>
-        <p>Облаковість: ${cloud}%</p>
-        <p>Температура відчувається як: ${temp_feels}°C</p>
-        <img src="http://openweathermap.org/img/wn/${weather_icon}.png" alt="weather icon" />
-        <p>Дата: ${weekday}, ${day} ${month} ${year}</p>
-        <p>Час: ${hours}:${minutes < 10 ? "0" + minutes : minutes}</p>
-    `;
-}
-
 function renderWeather(data) {
     const weatherContainer = document.getElementById("weatherInfo");
-    const weatherHTML = prepareWeather(data);
-    weatherContainer.innerHTML = weatherHTML;
+
+    while (weatherContainer.firstChild) {
+        weatherContainer.removeChild(weatherContainer.firstChild);
+    }
+
+    const title = document.createElement("h2");
+    title.textContent = `Погода в місті ${data.city}`;
+    weatherContainer.appendChild(title);
+
+    const temp = document.createElement("p");
+    temp.textContent = `Температура: ${data.temp}°C`;
+    weatherContainer.appendChild(temp);
+
+    const humidity = document.createElement("p");
+    humidity.textContent = `Вологість: ${data.humidity}%`;
+    weatherContainer.appendChild(humidity);
+
+    const wind = document.createElement("p");
+    wind.textContent = `Швидкість вітру: ${data.wind_speed} м/с`;
+    weatherContainer.appendChild(wind);
+
+    const cloudiness = document.createElement("p");
+    cloudiness.textContent = `Облаковість: ${data.cloud}%`;
+    weatherContainer.appendChild(cloudiness);
+
+    const tempFeels = document.createElement("p");
+    tempFeels.textContent = `Температура відчувається як: ${data.temp_feels}°C`;
+    weatherContainer.appendChild(tempFeels);
+
+    const icon = document.createElement("img");
+    icon.src = `http://openweathermap.org/img/wn/${data.weather_icon}.png`;
+    icon.alt = "weather icon";
+    weatherContainer.appendChild(icon);
+
+    const date = document.createElement("p");
+    date.textContent = `Дата: ${data.weekday}, ${data.day} ${data.month} ${data.year}`;
+    weatherContainer.appendChild(date);
+
+    const time = document.createElement("p");
+    time.textContent = `Час: ${data.hours}:${data.minutes < 10 ? "0" + data.minutes : data.minutes}`;
+    weatherContainer.appendChild(time);
 }
+
