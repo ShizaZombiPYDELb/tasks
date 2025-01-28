@@ -1,0 +1,26 @@
+.delete-btn{
+    pointer-events: auto;
+}
+
+.todo-item--checked {
+    text-decoration: line-through;
+    pointer-events: auto;
+}
+
+.check-box {
+    pointer-events: auto;
+}
+
+.todo-item__description {
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.info{
+    margin-right: 5px;
+    pointer-events: auto;
+}
+.container{
+    opacity: 0;
+
+}
