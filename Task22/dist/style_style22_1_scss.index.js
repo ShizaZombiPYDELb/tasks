@@ -1,0 +1,2 @@
+/*! For license information please see style_style22_1_scss.index.js.LICENSE.txt */
+"use strict";(self.webpackChunkwebpack=self.webpackChunkwebpack||[]).push([["style_style22_1_scss"],{"./style/style22.1.scss":(__unused_webpack_module,__webpack_exports__,__webpack_require__)=>{eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extract-plugin\n\n\n//# sourceURL=webpack://webpack/./style/style22.1.scss?")}}]);
