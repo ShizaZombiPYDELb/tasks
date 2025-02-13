@@ -1,0 +1,45 @@
+.left-top{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+}
+.container-window{
+    height: 50%;
+    width: 100%;
+    padding: 1%;
+}
+
+.pocenter{
+    display: flex;
+    align-items: center;
+}
+
+.accept{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+}
+
+.character-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    width: 100%;
+    margin: 20px auto;
+    text-align: left;
+}
+
+.info-item {
+    font-size: 18px;
+}
+
+h3, h2 {
+    text-align: center;
+}
+
+ul {
+    padding-left: 20px;
+}
