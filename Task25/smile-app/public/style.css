@@ -1,0 +1,24 @@
+button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: green;
+}
+
+
+.booklist{
+    width: 90vw;
+    max-width: 1170px;
+    margin: 5rem auto;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(5, 2fr);
+}
+
+
+.book {
+    background: #fff;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+}
