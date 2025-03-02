@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title><%= htmlWebpackPlugin.options.title %></title>
 </head>
 <body>
-$END$
+<div class="container">
+    <h1>Todo list (<a href="https://swapi.dev/documentation#root">API</a>)</h1>
+    <form>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="title">Enter some title</span>
+            <input type="text" class="form-control" name="todo" placeholder="xxxxx" aria-label="todo" aria-describedby="basic-addon2">
+
+        </div>
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="description">Enter some description</span>
+            <input type="text" class="form-control" name="description" placeholder="xxxxx" aria-label="description" aria-describedby="basic-addon2">
+        </div>
+        <button class="btn btn-outline-secondary">Create todo</button>
+    </form>
+    <div data-content>
+    </div>
+</div>
 </body>
-</html>

@@ -1,0 +1,14 @@
+{
+  "name": "task24",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "shizazombipydelb",
+  "license": "MIT",
+  "type": "module",
+  "private": true,
+  "workspaces": ["frontend", "service"],
+  "scripts": {
+    "start:server": "yarn workspace service run start:dev",
+    "start:frontend": "yarn workspace frontend run start"
+  }
+}

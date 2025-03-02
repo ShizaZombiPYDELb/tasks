@@ -1,3 +1,7 @@
-let name = prompt("What is your name?");
+const userName = prompt("Будь ласка, введіть ваше ім'я:");
 
-alert(`Hello,${name}! How are you?`)
+if (userName) {
+    alert(`Hello, ${userName}! How are you?`);
+} else {
+    alert("Hello, Guest! How are you?");
+}

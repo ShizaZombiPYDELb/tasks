@@ -1,15 +1,6 @@
-let name = prompt("Гривні у доліри!:");
-switch (name) {
-    case name === 0:
-        // Код, що виконується, якщо вираз рівний значенню1
-        break;
-    case значення2:
-        // Код, що виконується, якщо вираз рівний значенню2
-        break;
-    case значення3:
-        // Код, що виконується, якщо вираз рівний значенню3
-        break;
-    // Інші варіанти case
-    default:
-    // Код, що виконується, якщо жоден варіант не підходить
+const exchangeRate = 26;
+
+for (let dollars = 10; dollars <= 100; dollars += 10) {
+    const hryvnias = dollars * exchangeRate;
+    console.log(`${dollars} доларів = ${hryvnias} гривень`);
 }
