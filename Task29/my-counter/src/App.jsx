@@ -1,5 +1,5 @@
 import React from 'react';
-import Counter from "./features/Counter/Counter.jsx";
+import Counter from "./Counter/Counter.jsx";
 
 
 function App() {
